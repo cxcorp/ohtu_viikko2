@@ -4,20 +4,10 @@ import java.util.*;
 
 public class VarastoImpl implements Varasto {
 
-    private static Varasto instanssi;
-
-    public static Varasto getInstance() {
-        if (instanssi == null) {
-            instanssi = new VarastoImpl();
-        }
-
-        return instanssi;
-    }
-
     private Kirjanpito kirjanpito;
     private HashMap<Tuote, Integer> saldot;  
     
-    private VarastoImpl() {
+    public VarastoImpl() {
         kirjanpito = Kirjanpito.getInstance();
         saldot = new HashMap<Tuote, Integer>();
         alustaTuotteet();

@@ -6,9 +6,9 @@ public class Main {
 
     public static void main(String[] args) {
         Kauppa kauppa = new Kauppa(
-            VarastoImpl.getInstance(),
-            PankkiImpl.getInstance(),
-            ViitegeneraattoriImpl.getInstance()
+            new VarastoImpl(),
+            new PankkiImpl(),
+            new ViitegeneraattoriImpl()
         );
 
         // kauppa hoitaa yhden asiakkaan kerrallaan seuraavaan tapaan:
