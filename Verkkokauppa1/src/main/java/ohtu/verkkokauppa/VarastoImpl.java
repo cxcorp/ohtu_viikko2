@@ -4,12 +4,12 @@ import java.util.*;
 
 public class VarastoImpl implements Varasto {
 
-    private Kirjanpito kirjanpito;
-    private HashMap<Tuote, Integer> saldot;  
+    private final Kirjanpito kirjanpito;
+    private final HashMap<Tuote, Integer> saldot;
     
-    public VarastoImpl() {
-        kirjanpito = Kirjanpito.getInstance();
-        saldot = new HashMap<Tuote, Integer>();
+    public VarastoImpl(Kirjanpito kirjanpito) {
+        this.kirjanpito = kirjanpito;
+        saldot = new HashMap<>();
         alustaTuotteet();
     }
             
