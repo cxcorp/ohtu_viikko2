@@ -11,10 +11,4 @@
 
     <context:annotation-config />
     <context:component-scan base-package="ohtu.verkkokauppa" />
-
-    <bean id="kirjanpitoImpl" class="ohtu.verkkokauppa.KirjanpitoImpl" />
-    <bean id="pankkiImpl" class="ohtu.verkkokauppa.PankkiImpl" autowire="constructor" />
-    <bean id="varastoImpl" class="ohtu.verkkokauppa.VarastoImpl" autowire="constructor" />
-    <bean id="viitegeneraattoriImpl" class="ohtu.verkkokauppa.ViitegeneraattoriImpl" />
-    <bean id="kauppa" class="ohtu.verkkokauppa.Kauppa" autowire="constructor" />
 </beans>
